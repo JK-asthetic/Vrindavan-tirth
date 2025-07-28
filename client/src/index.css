@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(24, 9.8%, 10%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(24, 9.8%, 10%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(24, 9.8%, 10%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(28, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(24, 9.8%, 10%);
+  --radius: 0.5rem;
+  
+  /* Custom spiritual colors */
+  --saffron: hsl(28, 100%, 50%);
+  --deep-orange: hsl(14, 100%, 59%);
+  --golden: hsl(51, 100%, 50%);
+  --warm-amber: hsl(45, 100%, 51%);
+  --cream: hsl(50, 67%, 97%);
+  --warm-gray: hsl(43, 33%, 96%);
+  --dark-brown: hsl(24, 42%, 26%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(28, 100%, 50%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .bg-saffron {
+    background-color: hsl(var(--saffron));
+  }
+  
+  .bg-deep-orange {
+    background-color: hsl(var(--deep-orange));
+  }
+  
+  .bg-golden {
+    background-color: hsl(var(--golden));
+  }
+  
+  .bg-warm-amber {
+    background-color: hsl(var(--warm-amber));
+  }
+  
+  .bg-cream {
+    background-color: hsl(var(--cream));
+  }
+  
+  .bg-warm-gray {
+    background-color: hsl(var(--warm-gray));
+  }
+  
+  .bg-dark-brown {
+    background-color: hsl(var(--dark-brown));
+  }
+  
+  .text-saffron {
+    color: hsl(var(--saffron));
+  }
+  
+  .text-deep-orange {
+    color: hsl(var(--deep-orange));
+  }
+  
+  .text-golden {
+    color: hsl(var(--golden));
+  }
+  
+  .text-warm-amber {
+    color: hsl(var(--warm-amber));
+  }
+  
+  .text-dark-brown {
+    color: hsl(var(--dark-brown));
+  }
+  
+  .border-saffron {
+    border-color: hsl(var(--saffron));
+  }
+  
+  .border-golden {
+    border-color: hsl(var(--golden));
+  }
+}
+
+@layer utilities {
+  .bg-gradient-saffron {
+    background: linear-gradient(135deg, hsl(var(--saffron)), hsl(var(--deep-orange)));
+  }
+  
+  .text-gradient-saffron {
+    background: linear-gradient(135deg, hsl(var(--saffron)), hsl(var(--deep-orange)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Fix any potential white text on white background issues */
+@layer components {
+  /* Ensure select dropdowns have proper contrast */
+  .select-content {
+    background-color: white !important;
+    color: hsl(var(--dark-brown)) !important;
+  }
+  
+  /* Ensure form elements have proper contrast */
+  .form-input {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
+  
+  /* Ensure sheet/modal backgrounds are proper */
+  .sheet-content {
+    background-color: white !important;
+    color: hsl(var(--dark-brown)) !important;
+  }
+}
