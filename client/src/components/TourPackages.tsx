@@ -115,7 +115,7 @@ export default function TourPackages() {
               </CardContent>
 
               <CardFooter>
-                <Link href={`/Vrindavan-tirth/${pkg.slug}`}>
+                <Link href={`/${pkg.slug}`}>
                   <Button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white hover:from-orange-600 hover:to-yellow-600 hover:shadow-lg transition-all duration-300">
                     See Details
                   </Button>
