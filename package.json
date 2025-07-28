@@ -13,7 +13,7 @@
     "db:push": "drizzle-kit push",
     "postbuild": "cp dist/index.html dist/404.html",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -f"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
