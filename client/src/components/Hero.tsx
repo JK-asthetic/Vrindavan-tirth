@@ -52,13 +52,13 @@ export default function Hero() {
             View Tour Packages
           </Button>
           <Button
-            onClick={() => window.open("tel:+918360424383")}
+            onClick={() => window.open("tel:+916395809345")}
             variant="secondary"
             size="lg"
             className="bg-white/90 text-slate-800 hover:bg-white hover:text-slate-900 transition-all duration-300 transform hover:-translate-y-1"
           >
             <Phone className="w-5 h-5 mr-2" />
-            +91 8171217653
+            +91 6395809345
           </Button>
         </div>
       </div>

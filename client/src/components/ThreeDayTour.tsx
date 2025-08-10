@@ -80,7 +80,7 @@ export default function ThreeDayTour() {
 
   const handleBooking = () => {
     const message = `I'm interested in booking the 3 Day Vrindavan-Mathura-Barsana Tour (₹5,100). Please provide more details and confirm availability.`;
-    const whatsappUrl = `https://api.whatsapp.com/send/?phone=918360424383&text=${encodeURIComponent(
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=916395809345&text=${encodeURIComponent(
       message
     )}&type=phone_number&app_absent=0`;
     window.open(whatsappUrl, "_blank");
@@ -228,7 +228,7 @@ export default function ThreeDayTour() {
 
                 <Button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white hover:from-orange-600 hover:to-yellow-600 hover:shadow-lg transition-all duration-300 py-3">
                   <Phone className="w-4 h-4 mr-2" />
-                  Call us: +91 81712176533
+                  Call us: +91 6395809345
                 </Button>
               </CardContent>
             </Card>

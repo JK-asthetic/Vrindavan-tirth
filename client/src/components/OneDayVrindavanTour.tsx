@@ -192,7 +192,7 @@ export default function OneDayVrindavanTour() {
 
                 <Button className="w-full bg-gradient-to-r from-orange-500 to-yellow-500 text-white hover:from-orange-600 hover:to-yellow-600 hover:shadow-lg transition-all duration-300 py-3">
                   <Phone className="w-4 h-4 mr-2" />
-                  Call us: +91 81712176533
+                  Call us: +91 6395809345
                 </Button>
               </CardContent>
             </Card>

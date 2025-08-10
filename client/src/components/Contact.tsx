@@ -39,7 +39,7 @@ Phone: ${formData.phone}
 Package: ${formData.package || 'Not specified'}
 Message: ${formData.message || 'None'}`;
 
-    const whatsappUrl = `https://api.whatsapp.com/send/?phone=918360424383&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
+    const whatsappUrl = `https://api.whatsapp.com/send/?phone=916395809345&text=${encodeURIComponent(message)}&type=phone_number&app_absent=0`;
     window.open(whatsappUrl, '_blank');
 
     toast({
@@ -61,8 +61,8 @@ Message: ${formData.message || 'None'}`;
     {
       icon: Phone,
       title: "Phone",
-      content: "+91 8360424383",
-      link: "tel:+918360424383"
+      content: "+91 6395809345",
+      link: "tel:+916395809345"
     },
     {
       icon: Mail,
@@ -80,7 +80,7 @@ Message: ${formData.message || 'None'}`;
       icon: MessageCircle,
       title: "WhatsApp",
       content: "Chat Now",
-      link: "https://api.whatsapp.com/send/?phone=918360424383&text&type=phone_number&app_absent=0"
+      link: "https://api.whatsapp.com/send/?phone=916395809345&text&type=phone_number&app_absent=0"
     }
   ];
 

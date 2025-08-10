@@ -92,7 +92,7 @@ export default function Navigation() {
 
           <div className="flex items-center space-x-4">
             <Button
-              onClick={() => window.open("tel:+9181712176533")}
+              onClick={() => window.open("tel:+916395809345")}
               className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white hover:from-orange-600 hover:to-yellow-600 hover:shadow-lg transition-all duration-300"
             >
               <Phone className="w-4 h-4 mr-2" />

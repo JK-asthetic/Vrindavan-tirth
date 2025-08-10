@@ -19,7 +19,7 @@ export default function Footer() {
 
           <div className="flex justify-center space-x-6 mb-8">
             <a
-              href="tel:+9181712176533"
+              href="tel:+916395809345"
               className="text-white/70 hover:text-orange-400 transition-colors"
               aria-label="Call us"
             >

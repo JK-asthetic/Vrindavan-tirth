@@ -26,7 +26,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-          <WouterRouter base="/Vrindavan-tirth">
+          <WouterRouter base="/">
             <Router />
           </WouterRouter>
       </TooltipProvider>
