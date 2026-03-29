@@ -13,9 +13,9 @@ import temp8 from "@/assets/temp8.jpg";
 import temp9 from "@/assets/temp9.jpg";
 import temp10 from "@/assets/temp10.jpg";
 
-import waImg1 from "@/Assets/WhatsApp Image 2026-03-28 at 11.03.38 PM.jpeg";
-import waImg2 from "@/Assets/WhatsApp Image 2026-03-28 at 11.03.39 PM.jpeg";
-import waImg3 from "@/Assets/WhatsApp Image 2026-03-28 at 11.03.42 PM.jpeg";
+import waImg1 from "@/assets/WhatsApp Image 2026-03-28 at 11.03.38 PM.jpeg";
+import waImg2 from "@/assets/WhatsApp Image 2026-03-28 at 11.03.39 PM.jpeg";
+import waImg3 from "@/assets/WhatsApp Image 2026-03-28 at 11.03.42 PM.jpeg";
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
