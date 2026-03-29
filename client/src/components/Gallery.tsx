@@ -13,15 +13,33 @@ import temp8 from "@/assets/temp8.jpg";
 import temp9 from "@/assets/temp9.jpg";
 import temp10 from "@/assets/temp10.jpg";
 
+import waImg1 from "@/Assets/WhatsApp Image 2026-03-28 at 11.03.38 PM.jpeg";
+import waImg2 from "@/Assets/WhatsApp Image 2026-03-28 at 11.03.39 PM.jpeg";
+import waImg3 from "@/Assets/WhatsApp Image 2026-03-28 at 11.03.42 PM.jpeg";
+
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
+ 
+    {
+      src: waImg2,
+      alt: "Vrindavan glimpse 2",
+      place: "Vrindavan Dham",
+      className: "object-top",
+    },
+    {
+      src: waImg3,
+      alt: "Vrindavan glimpse 3",
+      place: "Vrindavan Dham",
+      className: "object-top",
+    },
     {
       src: temp1,
       alt: "Beautiful Hindu temple with intricate architecture",
       place: "Madan Mohan ji Temple",
     },
+    
     {
       src: temp4,
       alt: "Traditional Indian auto-rickshaw for local temple transportation",
@@ -88,7 +106,7 @@ export default function Gallery() {
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                className={`w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300 ${image.className || ""}`}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">

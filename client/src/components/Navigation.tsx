@@ -42,24 +42,19 @@ export default function Navigation() {
       >
         Tour Packages
       </button>
-      <button
-        onClick={() => scrollToSection("services")}
-        className="text-amber-900 hover:text-orange-500 transition-colors"
-      >
-        Services
-      </button>
+     
       <button
         onClick={() => scrollToSection("gallery")}
         className="text-amber-900 hover:text-orange-500 transition-colors"
       >
         Gallery
       </button>
-      <button
+      {/* <button
         onClick={() => scrollToSection("contact")}
         className="text-amber-900 hover:text-orange-500 transition-colors"
       >
         Contact
-      </button>
+      </button> */}
     </>
   );
 
