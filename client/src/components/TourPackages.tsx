@@ -7,9 +7,9 @@ import {
 } from "@/components/ui/card";
 import { Clock } from "lucide-react";
 import { Link } from "wouter";
-import temp10 from "@/assets/temp10.jpg";
-import temp3 from "@/assets/temp3.jpg";
-import temp9 from "@/assets/temp9.jpg";
+import temp10 from "@/Assets/temp10.jpg";
+import temp3 from "@/Assets/temp3.jpg";
+import temp9 from "@/Assets/temp9.jpg";
 
 export default function TourPackages() {
   const packages = [

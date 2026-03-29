@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Clock, MapPin, Phone, Users, Car, Camera } from "lucide-react";
-import temp10 from "@/assets/temp10.jpg";
+import temp10 from "@/Assets/temp10.jpg";
 export default function OneDayVrindavanTour() {
   const itinerary = [
     {

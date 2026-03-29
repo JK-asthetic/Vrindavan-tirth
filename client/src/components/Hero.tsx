@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone } from "lucide-react";
-import main from "@/assets/main.jpg";
+import main from "@/Assets/main.jpg";
 
 export default function Hero() {
   const scrollToPackages = () => {

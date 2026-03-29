@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import temp9 from "@/assets/temp9.jpg";
+import temp9 from "@/Assets/temp9.jpg";
 import {
   Clock,
   MapPin,

@@ -16,7 +16,7 @@ import {
   Mountain,
   Waves,
 } from "lucide-react";
-import temp3 from "@/assets/temp3.jpg";
+import temp3 from "@/Assets/temp3.jpg";
 
 export default function Braj84KosYatra() {
   const yatraPhases = [
