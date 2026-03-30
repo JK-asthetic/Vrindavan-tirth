@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "wouter";
 import {
   Clock,
   MapPin,
@@ -17,8 +18,44 @@ import {
   Waves,
 } from "lucide-react";
 import temp3 from "@/Assets/temp3.jpg";
+import Navigation from "@/components/Navigation";
+import { TourPageSchema } from "@/components/SEOSchema";
+import { useSEO } from "@/hooks/useSEO";
+
+const PAGE_URL = "https://vrindavantirth.com/braj-84-kos-yatra";
+
+const pageFAQs = [
+  {
+    question: "What is the Braj 84 Kos Yatra?",
+    answer: "The Braj 84 Kos Yatra is the most sacred and comprehensive Hindu pilgrimage covering 252 kilometres (84 kos) of the Braj Mandal region, visiting 50+ sacred sites associated with Lord Krishna including Vrindavan, Mathura, Govardhan, Radha Kund, Barsana, Nandgaon, and Gokul over 7-10 days.",
+  },
+  {
+    question: "How much does the Braj 84 Kos Yatra package cost?",
+    answer: "Our complete Braj 84 Kos Yatra package costs ₹15,000 per person. This premium all-inclusive package covers expert Brijwasi guide for the entire journey, temple entry coordination, spiritual discourses, traditional yatra kit, prasad at all major sites, and medical support.",
+  },
+  {
+    question: "How many days does the Braj 84 Kos Yatra take?",
+    answer: "The Braj 84 Kos Yatra typically takes 7 to 10 days to complete. Our structured 8-day itinerary covers all major phases including Vrindavan darshan, Mathura circuit, Govardhan parikrama, Deeg, Barsana-Nandgaon circuit, sacred forests, Gokul and the yatra completion ceremony.",
+  },
+  {
+    question: "What is included in the Braj 84 Kos Yatra package?",
+    answer: "The package includes: Expert Brijwasi Guide for the complete journey, temple entry fees & donations, special prasad at all major sites, traditional yatra kit, photography & videography, spiritual discourses, cultural programs, and medical support.",
+  },
+];
+
+const pageBreadcrumbs = [
+  { name: "Home", url: "https://vrindavantirth.com/" },
+  { name: "Tour Packages", url: "https://vrindavantirth.com/#packages" },
+  { name: "Braj 84 Kos Yatra", url: PAGE_URL },
+];
 
 export default function Braj84KosYatra() {
+  useSEO({
+    title: "Braj 84 Kos Yatra Package ₹15,000 | Complete Sacred Pilgrimage | Vrindavan Tirth",
+    description: "Book the complete Braj 84 Kos Yatra at ₹15,000/person. 7+ day pilgrimage covering 50+ sacred sites — Vrindavan, Mathura, Govardhan, Radha Kund, Barsana & more. Expert Brijwasi guide. Call +91 6395809345.",
+    canonical: PAGE_URL,
+    keywords: "Braj 84 kos yatra, 84 kos parikrama, Braj Mandal yatra, complete Braj pilgrimage, Govardhan parikrama, Vrindavan pilgrimage package",
+  });
   const yatraPhases = [
     {
       day: "Day 1",
@@ -236,6 +273,31 @@ export default function Braj84KosYatra() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-amber-50">
+      {/* JSON-LD Tour Schema */}
+      <TourPageSchema
+        name="Braj 84 Kos Yatra"
+        description="Complete traditional 84 Kos Braj pilgrimage covering 252 km and 50+ sacred sites of Krishna's divine pastimes over 7-10 days."
+        price="15000"
+        duration="7-10 Days"
+        url={PAGE_URL}
+        faqs={pageFAQs}
+        breadcrumbs={pageBreadcrumbs}
+        reviewCount={47}
+        ratingValue={5.0}
+      />
+
+      <Navigation />
+
+      {/* Breadcrumb */}
+      <nav aria-label="Breadcrumb" className="pt-20 pb-0 px-4 max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <ol className="flex items-center flex-wrap gap-1 text-sm text-gray-500 py-3">
+          <li><Link href="/" className="hover:text-orange-500 transition-colors">Home</Link></li>
+          <li className="text-gray-300">/</li>
+          <li><Link href="/#packages" className="hover:text-orange-500 transition-colors">Tour Packages</Link></li>
+          <li className="text-gray-300">/</li>
+          <li className="text-orange-600 font-medium" aria-current="page">Braj 84 Kos Yatra</li>
+        </ol>
+      </nav>
       {/* Hero Section */}
       <section
         className="relative h-96 bg-cover bg-center"
@@ -254,9 +316,10 @@ export default function Braj84KosYatra() {
               Braj 84 Kos Yatra
             </h1>
             <p className="text-xl md:text-2xl">
-              Complete Traditional Pilgrimage
+              Complete Traditional Sacred Pilgrimage
             </p>
-            <p className="text-lg mt-2 opacity-90">7+ Days Sacred Journey</p>
+            <p className="text-lg mt-2 opacity-90">7+ Days · 50+ Sacred Sites · 252 km</p>
+            <p className="text-base mt-1 font-semibold text-yellow-300">₹15,000 per person · Call +91 6395809345</p>
           </div>
         </div>
       </section>
@@ -478,6 +541,19 @@ export default function Braj84KosYatra() {
           </div>
         </div>
       </div>
+
+      {/* Floating WhatsApp Button */}
+      <a
+        href={`https://api.whatsapp.com/send/?phone=916395809345&text=${encodeURIComponent("I'm interested in booking the Braj 84 Kos Yatra (₹15,000). Please provide detailed itinerary and confirm availability.")}&type=phone_number&app_absent=0`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition-colors z-50"
+        aria-label="WhatsApp to book Braj 84 Kos Yatra"
+      >
+        <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+      </a>
     </div>
   );
 }

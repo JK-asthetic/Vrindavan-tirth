@@ -54,6 +54,9 @@
   --destructive: hsl(0, 62.8%, 30.6%);
   --destructive-foreground: hsl(0, 0%, 98%);
   --ring: hsl(240, 4.9%, 83.9%);
+  /* Google Fonts */
+  --font-body: 'Poppins', system-ui, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
 }
 
 @layer base {
@@ -61,8 +64,18 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply antialiased bg-background text-foreground;
+    font-family: var(--font-body);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
   }
 }
 

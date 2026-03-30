@@ -18,17 +18,19 @@ export default function Hero() {
       {/* Grey overlay with gradient for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/80 z-10"></div>
 
-      {/* Optimized image with loading and fallback */}
+      {/* Hero image — eager + high priority for best LCP score */}
       <img
         src={main}
-        alt="Beautiful Hindu temple architecture in Vrindavan"
+        alt="Beautiful Hindu temple architecture in Vrindavan Dham, sacred pilgrimage site"
         className="absolute inset-0 w-full h-full object-cover"
-        loading="lazy"
+        loading="eager"
+        fetchPriority="high"
+        decoding="sync"
         onError={(e) => {
           const img = e.target as HTMLImageElement;
           img.style.display = "none";
           if (img.parentElement) {
-            img.parentElement.style.backgroundColor = "#1e293b"; // slate-800 fallback
+            img.parentElement.style.backgroundColor = "#1e293b";
           }
         }}
       />
