@@ -63,7 +63,10 @@
           "inLanguage": "en-IN",
           "potentialAction": {
             "@type": "SearchAction",
-            "target": "https://vrindavantirth.com/?s={search_term_string}",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://vrindavantirth.com/?s={search_term_string}"
+            },
             "query-input": "required name=search_term_string"
           }
         },

@@ -32,7 +32,9 @@ const testimonials = [
 const reviewSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://vrindavantirth.com/#localbusiness",
   name: "Vrindavan Tirth",
+  url: "https://vrindavantirth.com",
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "5.0",
@@ -49,6 +51,11 @@ const reviewSchema = {
       "@type": "Rating",
       ratingValue: t.rating,
       bestRating: 5,
+    },
+    itemReviewed: {
+      "@type": "LocalBusiness",
+      name: "Vrindavan Tirth",
+      "@id": "https://vrindavantirth.com/#localbusiness",
     },
   })),
 };
@@ -91,6 +98,16 @@ export default function Testimonials() {
               itemType="https://schema.org/Review"
             >
               <CardContent className="p-8">
+                {/* itemReviewed — required by Google for valid Review rich results */}
+                <div
+                  itemProp="itemReviewed"
+                  itemScope
+                  itemType="https://schema.org/LocalBusiness"
+                  className="hidden"
+                >
+                  <meta itemProp="name" content="Vrindavan Tirth" />
+                  <meta itemProp="url" content="https://vrindavantirth.com" />
+                </div>
                 <meta itemProp="datePublished" content={testimonial.date} />
                 <div
                   itemScope
